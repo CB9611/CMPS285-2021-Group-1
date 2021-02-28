@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button } from 'reactstrap';
 
 const NewContact = () => {
     const [newContact, setNewContact] = useState(
@@ -43,16 +44,18 @@ const NewContact = () => {
                 <label htmlFor="phoneNumber">Phone Number</label>
                     <input type="text" name="phoneNumber" value={newContact.phoneNumber} onChange={handleChange} required />
                 </div>
-                <div className="input-field" >
+                <div className="input-field">
                 <label htmlFor="email">Email</label>
                     <input type="text" name="email" value={newContact.email} onChange={handleChange} required />
                     </div>
-                    <div className="input-field" style={styles}>
+                    <div className="input-field">
                 <label htmlFor="comment">Comment</label>
-                    <input type="text" name="comment" value={newContact.comment} styles={{ width:"300px" }} onChange={handleChange} required />
+                    <input type="text" name="comment" value={newContact.comment} onChange={handleChange} required />
                     </div>
-                 <div>
-                    <button className="btn blue darken-3" type="submit">Sign Up</button>
+                 <div class="btn-group">
+                 <Button color="primary" type = "submit" size="lg">Submit</Button>{' '}
+                
+                                                 
                 </div>
             </form>
         </div>
