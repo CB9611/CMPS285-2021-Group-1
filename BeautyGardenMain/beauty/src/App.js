@@ -10,6 +10,9 @@ function App() {
   return (
     <div className="App">
           <NavBar/>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Contact} />
+          <Route exact path="/" component={About} />
         </div>
   );
 }
